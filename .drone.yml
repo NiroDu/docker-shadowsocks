@@ -1,3 +1,4 @@
+debug: true
 build:
   image: registry.aliyuncs.com/xueqingxiao/shadowsocks:latest
   when:
@@ -11,7 +12,6 @@ publish:
     repo: xueqingxiao/shadowsocks
     tag: latest
     file: Dockerfile
-    # mirror: https://n5fb0zgg.mirror.aliyuncs.com
     when:
       branch: master
 deploy:
