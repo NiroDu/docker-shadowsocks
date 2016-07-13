@@ -1,2 +1,13 @@
 build:
   image: registry.aliyuncs.com/xueqingxiao/shadowsocks:latest
+  when:
+    branch: master
+publish:
+  docker:
+    username: $$DOCKER_USERNAME
+    password: $$DOCKER_PASSWORD
+    email: $$DOCKER_EMAIL
+    registry: registry.aliyuncs.com
+    repo: xueqingxiao/shadowsocks
+    tag: latest
+    file: Dockerfile
