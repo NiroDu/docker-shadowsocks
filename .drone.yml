@@ -1,0 +1,2 @@
+build:
+  image: registry.aliyuncs.com/xueqingxiao/shadowsocks:latest
