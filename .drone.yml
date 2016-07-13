@@ -11,3 +11,4 @@ publish:
     repo: xueqingxiao/shadowsocks
     tag: latest
     file: Dockerfile
+    mirror: https://19tyykg1.mirror.aliyuncs.com
