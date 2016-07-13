@@ -8,5 +8,3 @@ RUN pip install shadowsocks==2.8.2 && \
   apt-get purge -y --auto-remove $buildDeps
 
 ENTRYPOINT ["/usr/local/bin/ssserver"]
-
-ADD shadowsocks.json /etc/
