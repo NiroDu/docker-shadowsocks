@@ -1,5 +1,9 @@
 build:
   image: registry.aliyuncs.com/xueqingxiao/shadowsocks:latest
+  commands:
+    - echo $$DOCKER_USERNAME
+    - echo $$DOCKER_PASSWORD
+    - echo $$DOCKER_EMAIL
   when:
     branch: master
 publish:
