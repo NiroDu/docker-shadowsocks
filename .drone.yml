@@ -1,5 +1,5 @@
 build:
-  image: registry.aliyuncs.com/xueqingxiao/shadowsocks:latest
+  image: xueqingxiao/shadowsocks:latest
   when:
     branch: master
 publish:
@@ -7,16 +7,15 @@ publish:
     username: $$DOCKER_USERNAME
     password: $$DOCKER_PASSWORD
     email: $$DOCKER_EMAIL
-    registry: registry.aliyuncs.com
     repo: xueqingxiao/shadowsocks
     tag: latest
     file: Dockerfile
-    mirror: https://19tyykg1.mirror.aliyuncs.com
 deploy:
   ssh:
     host: 47.88.189.75
     user: root
     commands:
       - docker pull registry.aliyuncs.com/xueqingxiao/shadowsocks
+      - echo $SSPASSWORD
       - docker rm -f shadowsocks
       - docker run --name=shadowsocks --restart=always -p 8388:8388 -d registry.aliyuncs.com/xueqingxiao/shadowsocks -s 0.0.0.0 -p 8388 -k xueqingxiao! -m aes-256-cfb
