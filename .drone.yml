@@ -17,4 +17,5 @@ deploy:
     commands:
       - docker pull xueqingxiao/docker-shadowsocks
       - docker rm -f shadowsocks
-      - docker run --name=shadowsocks --restart=always -p 8388:8388 -d xueqingxiao/docker-shadowsocks -s 0.0.0.0 -p 8388 -k $SSPASSWORD -m aes-256-cfb
+      - echo $$SSPASSWORD
+      - docker run --name=shadowsocks --restart=always -p 8388:8388 -d xueqingxiao/docker-shadowsocks -s 0.0.0.0 -p 8388 -k $$SSPASSWORD -m aes-256-cfb
