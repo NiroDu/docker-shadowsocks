@@ -1,3 +1,7 @@
+build:
+  image: xueqingxiao/shadowsocks:latest
+  when:
+    branch: master
 publish:
   docker:
     username: $$DOCKER_USERNAME
