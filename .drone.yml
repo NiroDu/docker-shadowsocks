@@ -12,7 +12,7 @@ publish:
     file: Dockerfile
 deploy:
   ssh:
-    host: 47.88.189.75
+    host: xueqingxiao.tech
     user: root
     commands:
       - docker pull xueqingxiao/docker-shadowsocks
